@@ -24,4 +24,3 @@ for char in passward:
     final_passward += char
 
 print(f"Your passward is : {final_passward}")
-
