@@ -22,7 +22,7 @@ print("Word to guess: " + placeholder)
 
 
 while not gameover:
-    print("****************************{lives}/6 LIVES LEFT****************************")
+    print(f"****************************{lives}/6 LIVES LEFT****************************")
     guess = input("Guess a letter: ").lower()
 
     if guess in correct_letters:
