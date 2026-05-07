@@ -3,9 +3,6 @@ import os
 from hangman_arts import logo, stages
 from hangman_words import word_list
 
-
-def clear_screen():
-    os.system('cls' if os.name == 'nt' else 'clear')
 lives = 6
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -57,4 +54,3 @@ while not gameover:
         print("****************************YOU WIN****************************")
 
     print(stages[lives])
-
