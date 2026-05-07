@@ -1,20 +1,25 @@
 import random
+import os
 from hangman_arts import logo, stages
 from hangman_words import word_list
 
 lives = 6
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+chosen_word = random.choice(word_list)
+lives = 6
+gameover = False
+correct_letters = []
+guessed_letters = []
 
 print(logo)
-chosen_word = random.choice(word_list)
-print(chosen_word)
 
 placeholder = ""
 for position in range(0, len(chosen_word)):
     placeholder += "_"
 print("Word to guess: " + placeholder)
 
-gameover = False
-correct_letters = []
 
 while not gameover:
     print("****************************{lives}/6 LIVES LEFT****************************")
@@ -42,7 +47,7 @@ while not gameover:
         if lives == 0:
             gameover = True
 
-        print(f"***********************IT WAS {chosen_word}! YOU LOSE**********************")
+            print(f"***********************IT WAS {chosen_word}! YOU LOSE**********************")
 
     if "_" not in display:
         gameover = True
