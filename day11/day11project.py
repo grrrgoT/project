@@ -1,4 +1,8 @@
 import random
+import blackjack_logos
+
+print(blackjack_logos.logo)
+
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 
 game_over = False
