@@ -1,8 +1,6 @@
 import random
 import blackjack_logos
 
-print(blackjack_logos.logo)
-
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 
 game_over = False
@@ -16,6 +14,7 @@ computer_cards = []
 computer_cards.append(random.choice(cards))
 first_cop_cards = print(f"Computer's first card: {computer_cards}")
 
+print(blackjack_logos.logo)
 
 while not game_over:
     pick = input("Type 'y' to get another card, type 'n' to pass: ")
