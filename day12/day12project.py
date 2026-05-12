@@ -1,8 +1,9 @@
 import random
 import day12number_logo
 
+print(day12number_logo.logo)
+
 def game():
-    print(day12number_logo.logo)
     print("Welcome to the Number Guessing Game! ")
     print("I'm thinking of a number between 1 and 100. ")
 
