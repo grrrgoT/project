@@ -13,7 +13,7 @@ def game():
     if level == "easy":
         life = 10
         
-    if level == "hard":
+    else:
         life = 5
 
     is_game_over = False
