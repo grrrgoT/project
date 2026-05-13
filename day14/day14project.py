@@ -2,11 +2,23 @@ import high_or_low_logo
 import game_data
 import random
 
-print(high_or_low_logo.logo)
-game_over = False
-score = 0
+def format_data(account):
+    name = account["name"]
+    description = account["description"]
+    country = account["country"]
+    return f"{name}, a {description}, from {country}"
 
-compare2 = random.choice(game_data.data)
+def check_answer(guess, a_followers, b_followers):
+    if a_followers > b_followers:
+        return guess == "A"
+    else:
+        return guess == "B"
+def play_game():
+    print(high_or_low_logo.logo)
+    game_over = True
+    score = 0
+
+    compare2 = random.choice(game_data.data)
 
 while not game_over:
     compare1 = compare2
@@ -15,9 +27,10 @@ while not game_over:
     while compare1 == compare2:
         compare2 = random.choice(game_data.data)
 
-    print(f"Compare A: {compare1['name']}, a {compare1['description']}, from {compare1['country']}.")
+    print(f"Compare A: {format_data(account_a)}")
     print(high_or_low_logo.vs)
-    print(f"Compare B: {compare2['name']}, a {compare2['description']}, from {compare2['country']}.")
+    print(f"Compare B:{format_data(account_b)} ")
+    
     guess = input("Who has more followers? Type 'A' or 'B': ").upper()
 
     a_followers = compare1['follower_count']
